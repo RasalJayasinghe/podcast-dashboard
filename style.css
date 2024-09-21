@@ -1,93 +1,75 @@
-/* Body and general elements */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header styling */
-header {
-    background-color: #011ac7;
-    color: white;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
     text-align: center;
 }
 
-/* Section styling */
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.title {
+    font-size: 2rem;
+    color: #011ac7; /* Blue accent */
+    margin-bottom: 30px;
 }
 
-/* Episode, guest, and analytics layout */
-#episodes, #guest-list, #analytics-data {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-h2 {
-    color: #00237a;
-    border-bottom: 2px solid #00237a;
-    padding-bottom: 10px;
-}
-
-canvas {
-    margin-top: 20px;
-}
-
-/* Guest List Styling */
-#guest-list li {
-    background-color: #011ac7;
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    list-style-type: none;
-}
-
-/* Episode tiles styling */
-.episode-tiles {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.episode-tile {
+.card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    text-align: center;
-    padding: 10px;
+    transition: transform 0.3s ease;
 }
 
-.episode-tile img {
+.card img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    height: 200px;
+    object-fit: cover;
 }
 
-.episode-tile h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    color: #011ac7;
+.card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0;
 }
 
-.episode-tile a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #011ac7;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.card p {
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.episode-tile a:hover {
-    background-color: #00237a;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .card img {
+        height: 150px;
+    }
 }
