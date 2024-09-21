@@ -1,28 +1,56 @@
+/* Body and general elements */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
+/* Header styling */
 header {
     background-color: #011ac7;
-    color: white;
-    padding: 1rem;
+    color: #fff;
+    padding: 20px;
     text-align: center;
 }
 
+/* Section styling */
 section {
-    padding: 1rem;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#episodes, #guest-list, #analytics-data {
+/* Latest episodes */
+#episodes {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 20px;
 }
 
 h2 {
+    color: #00237a;
     border-bottom: 2px solid #00237a;
-    padding-bottom: 0.5rem;
+    padding-bottom: 10px;
+}
+
+/* Chart canvas */
+canvas {
+    margin-top: 20px;
+}
+
+/* Guests */
+#guest-list {
+    list-style: none;
+    padding: 0;
+}
+
+#guest-list li {
+    background-color: #011ac7;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
