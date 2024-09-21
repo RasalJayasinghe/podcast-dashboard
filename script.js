@@ -40,6 +40,37 @@ function loadAnalytics() {
     analyticsData.innerHTML = `<p>Coming soon: Views, Likes, and Subscriptions data.</p>`;
 }
 
+function createViewsChart(data) {
+    const ctx = document.getElementById('viewsChart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',  // or 'line', 'pie', etc.
+        data: {
+            labels: data.titles,  // Video titles as labels
+            datasets: [{
+                label: 'Views',
+                data: data.views,  // Video views as data
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',  // Bar colors
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Call this function after retrieving video statistics
+createViewsChart({
+    titles: ['Video 1', 'Video 2', 'Video 3'],  // Replace with real titles
+    views: [5000, 10000, 15000]  // Replace with real views
+});
+
+
 // Initialize the dashboard
 loadEpisodes();
 loadGuests();
