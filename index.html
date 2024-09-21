@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast Dashboard</title>
-    <!-- Link to the CSS file -->
+    <title>Podcast Grid</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Include Chart.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Podcast Dashboard</h1>
-    </header>
-
-    <!-- Latest YouTube Episodes Section -->
-    <section id="latest-episodes">
-    <h2>Latest Episodes</h2>
-    <div id="episodes" class="episode-tiles"></div>
-</section>
-
-    </section>
-
-    <!-- Featured Guests Section -->
-    <section id="guests">
-        <h2>Featured Guests</h2>
-        <ul id="guest-list"></ul>
-    </section>
-
-    <!-- Analytics Section -->
-    <section id="analytics">
-        <h2>Analytics</h2>
-        <canvas id="viewsChart" width="400" height="200"></canvas>
-    </section>
-
-    <!-- Link to the JavaScript file -->
-    <script src="script.js"></script>
+    <div class="container">
+        <h1 class="title">Upcoming Episodes & Guests</h1>
+        <div class="grid">
+            <div class="card">
+                <img src="guest1.jpg" alt="Guest 1">
+                <h2>Guest Name 1</h2>
+                <p>Episode Title 1</p>
+                <p>Release Date: 12th Oct</p>
+            </div>
+            <div class="card">
+                <img src="guest2.jpg" alt="Guest 2">
+                <h2>Guest Name 2</h2>
+                <p>Episode Title 2</p>
+                <p>Release Date: 19th Oct</p>
+            </div>
+            <div class="card">
+                <img src="guest3.jpg" alt="Guest 3">
+                <h2>Guest Name 3</h2>
+                <p>Episode Title 3</p>
+                <p>Release Date: 26th Oct</p>
+            </div>
+            <!-- Add more guest cards as needed -->
+        </div>
+    </div>
 </body>
 </html>
