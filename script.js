@@ -65,5 +65,35 @@ createViewsChart({
 });
 
 // Load YouTube episodes and guests
-loadEpisodes();
-loadGuests();
+function loadEpisodes() {
+    const youtubeChannelId = UC7cJu1o2-cMwH_O_XfvfRZw;  // Replace with your YouTube channel ID
+    const apiKey = AIzaSyA6RulwurPn578VgXGVx8pzKCowXfK3a5w;  // Replace with your API key
+    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${youtubeChannelId}&part=snippet,id&order=date&maxResults=5`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const episodesContainer = document.getElementById('episodes');
+            data.items.forEach(item => {
+                const videoId = item.id.videoId;
+                const videoTitle = item.snippet.title;
+                const videoThumbnail = item.snippet.thumbnails.high.url; // Get high-res thumbnail
+
+                // Create episode tile
+                const tile = document.createElement('div');
+                tile.classList.add('episode-tile');
+
+                // Add thumbnail, title, and play button
+                tile.innerHTML = `
+                    <img src="${videoThumbnail}" alt="${videoTitle} Thumbnail">
+                    <h3>${videoTitle}</h3>
+                    <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">Watch</a>
+                `;
+
+                // Append tile to container
+                episodesContainer.appendChild(tile);
+            });
+        })
+        .catch(error => console.error('Error fetching videos:', error));
+}
+
