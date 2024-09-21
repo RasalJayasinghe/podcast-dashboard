@@ -4,6 +4,8 @@ function loadEpisodes() {
     const youtubeChannelId = UC7cJu1o2-cMwH_O_XfvfRZw; // Replace with your YouTube Channel ID
     const apiKey = AIzaSyA6RulwurPn578VgXGVx8pzKCowXfK3a5w; // Replace with your YouTube API key
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${youtubeChannelId}&part=snippet,id&order=date&maxResults=5`;
+    const url = `https://www.googleapis.com/youtube/v3/videos?key=${apiKey}&part=snippet,statistics&id=${videoIds.join(',')}`;
+
 
     fetch(url)
         .then(response => response.json())
