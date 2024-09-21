@@ -9,7 +9,7 @@ body {
 /* Header styling */
 header {
     background-color: #011ac7;
-    color: #fff;
+    color: white;
     padding: 20px;
     text-align: center;
 }
@@ -23,8 +23,8 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Latest episodes */
-#episodes {
+/* Episode, guest, and analytics layout */
+#episodes, #guest-list, #analytics-data {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -36,21 +36,16 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Chart canvas */
 canvas {
     margin-top: 20px;
 }
 
-/* Guests */
-#guest-list {
-    list-style: none;
-    padding: 0;
-}
-
+/* Guest List Styling */
 #guest-list li {
     background-color: #011ac7;
     color: white;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    list-style-type: none;
 }
