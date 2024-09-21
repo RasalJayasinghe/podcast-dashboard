@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast Dashboard</title>
+    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
         <h1>Podcast Dashboard</h1>
     </header>
+
+    <!-- Latest YouTube Episodes Section -->
     <section id="latest-episodes">
         <h2>Latest Episodes</h2>
         <div id="episodes"></div>
     </section>
+
+    <!-- Featured Guests Section -->
     <section id="guests">
         <h2>Featured Guests</h2>
         <ul id="guest-list"></ul>
     </section>
+
+    <!-- Analytics Section -->
     <section id="analytics">
         <h2>Analytics</h2>
-        <div id="analytics-data"></div>
+        <canvas id="viewsChart" width="400" height="200"></canvas>
     </section>
-    <script src="script.js"></script>
-    <section id="analytics">
-    <h2>Analytics</h2>
-    <canvas id="viewsChart" width="400" height="200"></canvas>
-</section>
 
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
