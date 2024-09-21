@@ -3,33 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast Grid</title>
+    <title>My Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Upcoming Episodes & Guests</h1>
-        <div class="grid">
-            <div class="card">
-                <img src="guest1.jpg" alt="Guest 1">
-                <h2>Guest Name 1</h2>
-                <p>Episode Title 1</p>
-                <p>Release Date: 12th Oct</p>
-            </div>
-            <div class="card">
-                <img src="guest2.jpg" alt="Guest 2">
-                <h2>Guest Name 2</h2>
-                <p>Episode Title 2</p>
-                <p>Release Date: 19th Oct</p>
-            </div>
-            <div class="card">
-                <img src="guest3.jpg" alt="Guest 3">
-                <h2>Guest Name 3</h2>
-                <p>Episode Title 3</p>
-                <p>Release Date: 26th Oct</p>
-            </div>
-            <!-- Add more guest cards as needed -->
+    <header>
+        <nav>
+            <div class="logo">My Site</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#install">Install</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to My Site</h1>
+            <p>A site inspired by Oh My Zsh, focusing on simplicity and performance.</p>
+            <a href="#install" class="cta-button">Get Started</a>
         </div>
-    </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Easy Setup</h3>
+                <p>Install in seconds, with minimal configuration.</p>
+            </div>
+            <div class="feature">
+                <h3>Customizable</h3>
+                <p>Tweak the layout and appearance to match your style.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="install">
+        <h2>Install</h2>
+        <pre>
+            <code>$ git clone https://github.com/your-repo.git</code>
+        </pre>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <p>Common questions about the site and usage.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 My Site - All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
