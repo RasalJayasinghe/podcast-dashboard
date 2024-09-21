@@ -1,7 +1,7 @@
 // Load the latest episodes from YouTube
 function loadEpisodes() {
     const episodesContainer = document.getElementById('episodes');
-    const youtubeChannelId = https://www.youtube.com/channel/UC7cJu1o2-cMwH_O_XfvfRZw; // Replace with your YouTube Channel ID
+    const youtubeChannelId = UC7cJu1o2-cMwH_O_XfvfRZw; // Replace with your YouTube Channel ID
     const apiKey = AIzaSyA6RulwurPn578VgXGVx8pzKCowXfK3a5w; // Replace with your YouTube API key
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${youtubeChannelId}&part=snippet,id&order=date&maxResults=5`;
 
